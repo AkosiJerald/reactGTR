@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive&family=Lexend+Tera:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive&family=Lexend+Tera:wght@900&family=Montserrat:wght@500&display=swap');
+
+/* Header.css */
+
+header a{
+  text-decoration: none;
+  color: black;
+}
+header a:hover{
+  color: #E4405F;
+}
+
+header a:active{
+  color: green;
+}
+.nav{
+  position: relative;
+  left: 50%;
+}
+
+.icon{
+  width: 100px;
+  position: relative;
+  animation: moveLeft 5s ease-in-out infinite;
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200px); /* Adjust the distance you want the image to move */
+  }
+}
+
+@media (max-width:700px) {
+  
+  .nav{
+    position: absolute;
+    left: 100%;
+  }
+  .icon{
+    display: none;
+  }
+}
+
+.bg {
+  width: 250px;
+  position: relative;
+  
+}
+
+.welcome-section {
+  background-image: url("./img/bg.png");
+ background-repeat: no-repeat;
+ background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+ 
+}
+
+.welcome-section::before {
+  content: "";
+
+  background: inherit;
+  filter: blur(2px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Place it below the content */
+  filter: brightness(0.5);
+}
+@media (max-width: 700px) {
+  .welcome-section {
+    height: 40vh;
+
+  }
+  .bg {
+    width: 150px;
+    height: 80px;
+  }
+}
+
+.welcome-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  padding: 20px;
+}
+@media (max-width: 700px){
+  .welcome-content{
+    position: absolute;
+    top: 60%;
+   
+  }
+}
+.welcome-section * {
+  color: #e9e9e9;
+}
+
+/*abt*/
+.content {
+  width: 100%;
+  height: 30vh;
+  margin-bottom: 5%;
+}
+
+.brnd {
+  font-size: 1.5rem;
+}
+
+.dscrptn {
+  font-size: 0.8rem;
+  width: 100%;
+}
+.logo{
+  position: absolute;
+  left: 60%;
+}
+@media (max-width: 700px) {
+  .dscrptn {
+    font-size:14px;
+    width: 100%;
+    border: 2px solid black;
+  }
+ 
+  .brnd {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 700px){
+  .content{
+    width: 100%;
+    height: 25vh;
+    
+  }
+  .logo{
+    width: 45%;
+    left: 45%;
+    top: -120%;
+  }
+}
+
+/*cars*/
+.card-group{
+  position: relative;
+  top: 3%;
+}
+
+
+
+.card-img1{
+  background-image: url("./img/cardcar.jpg");
+  height: 80vh;
+  background-position: 0px -180px;
+  background-repeat: no-repeat;
+  filter: brightness(0.5);
+
+}
+.card-img2{
+  background-image: url("./img/cardcar2.png");
+  height: 80vh;
+  background-size: cover;
+  background-position: 0px -80px ;
+  background-repeat: no-repeat;
+  filter: brightness(0.5);
+}
+.card-img3{
+  background-image: url("./img/cardcar3.jpg");
+  height: 100vh;
+  background-position: 0px -80px;
+  background-repeat: no-repeat;
+  filter: brightness(0.6);
+  background-size: cover;
+
+}
+.nissan{
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 70px;
+  text-transform: uppercase;
+  background:  linear-gradient( 179deg,  rgb( 127,16,16,1) 9.2%, rgb(93, 64, 64) 103.9%);
+  -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+}
+.card-text1{
+  width: 25%;
+}
+.card-text2{
+  width: 25%;
+  
+}
+@media (max-width:700px) {
+  .card-img3{
+    background-image: url("./img/cardcar3.jpg");
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.6);
+    background-size: cover;
+  }
+  .nissan{
+    font-size: 25px;
+  }
+  .card-img2{
+    background-image: url("./img/cardcar2.png");
+    height: 50vh;
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+    filter: brightness(0.5);
+  }
+  .card-img1{
+    background-image: url("./img/cardcar.jpg");
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.5);
+  
+  }
+  .card-text1{
+   font-size: 14px;
+    width: 80%;
+  }
+  .card-text2{
+    width: 80%;
+    position: absolute;
+    left: 0%;
+  }
+
+  
+}
+.top-35{
+  position: relative;
+  top: 35%;
+}
+.top-45{
+  position: absolute;
+  top: 45%;
+}
+.left-10{
+  position: absolute;
+  left: 4%;
+}
+.left-50{
+  position: absolute;
+  left: 60%;
+}
+
+.qoute{
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background: linear-gradient( 113.3deg,  rgb(241, 52, 67) 6.9%, rgb(202, 129, 129) 75% );
+  -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent; 
+  position: absolute;
+  top: -40%;
+  left:10% ;
+}
+
+.cardcard{
+  margin-right: 5px;
+}
+
+
+.card-img-top{
+  box-shadow: 0px 5px 15px black;
+}
+
+/*footer*/
+footer{
+  width: 100%;
+  height: 30vh;
+  background-color: black;
+  
+}
+
+footer h4{
+  font-family: 'Cutive', serif;
+  font-family: 'Lexend Tera', sans-serif;
+  font-size: 18px;
+}
+footer li{
+  font-family: 'Cutive', serif;
+font-family: 'Lexend Tera', sans-serif;
+font-family: 'Montserrat', sans-serif;
+
+}
+
+footer .top-10{
+  position: relative;
+  top: 20%;
+}
+
+footer a{
+  color: #e9e9e9;
+  text-decoration: none;
+}
+
+footer a:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+
+
+footer .fa{
+  height: 40px;
+  margin-right: 2%;
+}
+footer .facebook{
+  color:  #1e5adbfb ;
+  width: 40px;
+}
+footer .twitter{
+  color:#00acee;
+  width: 40px;
+}
+footer .youtube{
+  color: red;
+  width: 40px;
+}
+footer .instagram{
+  color:#E4405F;
+  width: 40px;
+}
+
+footer .facebook:hover{
+  color:  #2e519c ;
+}
+footer .twitter:hover{
+  color:#2e91b8;
+}
+footer .youtube:hover{
+  color: rgb(196, 57, 57);
+}
+footer .instagram:hover{
+  color:#c26677;
+}
+
+footer .icon-container{
+  width: 100%;
+ 
+}
+@media (max-width:700px) {
+  
+  footer .title{
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  .qoute{
+    font-size: 1rem;
+  }
+  .border-end{
+    height: 20%;
+  }
+  footer .facebook{
+    height: 30px;
+    
+  }
+  footer .twitter{
+   height: 30px;
+  }
+  footer .youtube{
+    margin-top: 15px;
+    height: 30px;
+  }
+  footer .instagram{
+    margin-top: 15px;
+   height: 30px;
+  }
+  footer .icon-container{
+    margin-left: 20px;
+    width: 70%;
+  }
+}
